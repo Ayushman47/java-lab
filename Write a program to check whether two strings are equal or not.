@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class StringEqualityCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input two strings
+        System.out.print("Enter the first string: ");
+        String firstString = scanner.nextLine();
+
+        System.out.print("Enter the second string: ");
+        String secondString = scanner.nextLine();
+
+        // Check if strings are equal
+        if (firstString.equals(secondString)) {
+            System.out.println("The strings are equal.");
+        } else {
+            System.out.println("The strings are not equal.");
+        }
+
+        scanner.close();
+    }
+}
