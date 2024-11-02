@@ -1,0 +1,22 @@
+public class PrimeNumbers {
+    public static void main(String[] args) {
+        System.out.println("Prime numbers between 1 and 1000:");
+
+        for (int num = 2; num <= 1000; num++) {
+            boolean isPrime = true; // Assume the number is prime
+
+            // Check for factors from 2 to the square root of num
+            for (int i = 2; i * i <= num; i++) {
+                if (num % i == 0) { // If num is divisible by i, it's not prime
+                    isPrime = false;
+                    break; // No need to check further
+                }
+            }
+
+            // If isPrime is still true, then num is prime
+            if (isPrime) {
+                System.out.print(num + " "); // Print the prime number
+            }
+        }
+    }
+}
