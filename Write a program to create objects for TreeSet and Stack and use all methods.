@@ -1,0 +1,37 @@
+import java.util.TreeSet;
+import java.util.Stack;
+
+public class SimpleExample {
+    public static void main(String[] args) {
+        // TreeSet Example
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        treeSet.add(3);
+        treeSet.add(1);
+        treeSet.add(4);
+        treeSet.add(2);
+
+        // Display TreeSet
+        System.out.println("TreeSet: " + treeSet);
+
+        // Remove an element
+        treeSet.remove(2);
+        System.out.println("After removing 2: " + treeSet);
+
+        // Stack Example
+        Stack<Integer> stack = new Stack<>();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+
+        // Display Stack
+        System.out.println("Stack: " + stack);
+
+        // Pop an element
+        int popped = stack.pop();
+        System.out.println("Popped element: " + popped);
+        System.out.println("Stack after popping: " + stack);
+        
+        // Peek at the top element
+        System.out.println("Top element: " + stack.peek());
+    }
+}
