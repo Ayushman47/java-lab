@@ -1,0 +1,24 @@
+import java.util.Arrays;
+
+public class SimpleSortArray {
+    public static void main(String[] args) {
+        // Initial array
+        int[] array = {5, 2, 8, 3, 1};
+
+        // Print the original array
+        System.out.println("Original Array:");
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+
+        // Sort the array
+        Arrays.sort(array);
+
+        // Print the sorted array
+        System.out.println("Sorted Array:");
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+}
