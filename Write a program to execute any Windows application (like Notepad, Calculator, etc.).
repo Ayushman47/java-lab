@@ -1,0 +1,10 @@
+public class RunApp {
+    public static void main(String[] args) {
+        try {
+            Runtime.getRuntime().exec("notepad"); // Opens Notepad
+            Runtime.getRuntime().exec("calc");    // Opens Calculator
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
