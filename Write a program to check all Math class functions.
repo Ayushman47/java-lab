@@ -1,0 +1,46 @@
+public class MathFunctionsDemo {
+    public static void main(String[] args) {
+        // Absolute value
+        int negativeNumber = -10;
+        System.out.println("Absolute of -10: " + Math.abs(negativeNumber));
+
+        // Maximum and Minimum
+        int a = 5, b = 10;
+        System.out.println("Max of 5 and 10: " + Math.max(a, b));
+        System.out.println("Min of 5 and 10: " + Math.min(a, b));
+
+        // Square Root
+        double number = 25;
+        System.out.println("Square root of 25: " + Math.sqrt(number));
+
+        // Power
+        double base = 2, exponent = 3;
+        System.out.println("2 to the power of 3: " + Math.pow(base, exponent));
+
+        // Rounding
+        double decimal = 7.5;
+        System.out.println("Round 7.5: " + Math.round(decimal));
+
+        // Floor and Ceiling
+        System.out.println("Floor of 7.5: " + Math.floor(decimal));
+        System.out.println("Ceiling of 7.5: " + Math.ceil(decimal));
+
+        // Trigonometric functions (in radians)
+        double angle = Math.PI / 4; // 45 degrees in radians
+        System.out.println("Sine of 45 degrees: " + Math.sin(angle));
+        System.out.println("Cosine of 45 degrees: " + Math.cos(angle));
+        System.out.println("Tangent of 45 degrees: " + Math.tan(angle));
+
+        // Exponential and Logarithmic functions
+        double value = 2;
+        System.out.println("Exponential of 2: " + Math.exp(value));
+        System.out.println("Logarithm of 10: " + Math.log(10));
+
+        // Random number between 0.0 and 1.0
+        System.out.println("Random number: " + Math.random());
+
+        // Conversion between degrees and radians
+        System.out.println("90 degrees in radians: " + Math.toRadians(90));
+        System.out.println("π/2 radians in degrees: " + Math.toDegrees(Math.PI / 2));
+    }
+}
