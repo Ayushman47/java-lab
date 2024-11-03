@@ -1,0 +1,28 @@
+import java.nio.file.*;
+import java.util.Scanner;
+
+public class FileCopyWithConfirmation {
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter source file: ");
+        Path source = Paths.get(scanner.nextLine());
+        
+        System.out.print("Enter destination file: ");
+        Path destination = Paths.get(scanner.nextLine());
+
+        if (Files.exists(destination)) {
+            System.out.print("File exists. Overwrite? (yes/no): ");
+            if (!scanner.nextLine().equalsIgnoreCase("yes")) {
+                System.out.println("Copy cancelled.");
+                scanner.close();
+                return;
+            }
+        }
+
+        Files.copy(source, destination, StandardCopyOption.REPLACE_EXISTING);
+        System.out.println("File copied.");
+        scanner.close();
+    }
+}
+
