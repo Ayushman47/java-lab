@@ -1,0 +1,45 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.File;
+
+public class SimpleFileLister {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("File Lister");
+        frame.setSize(400, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        JLabel mouseLabel = new JLabel("Mouse: ");
+        JTextField numericField = new JTextField(10);
+        JTextArea fileArea = new JTextArea(10, 30);
+        fileArea.setEditable(false);
+        
+        JButton listButton = new JButton("List Files");
+        listButton.addActionListener(e -> {
+            String pattern = numericField.getText();
+            File[] files = new File(".").listFiles(); // Current directory
+            fileArea.setText(""); // Clear previous results
+            if (files != null) {
+                for (File file : files) {
+                    if (file.getName().contains(pattern)) {
+                        fileArea.append(file.getName() + "\n");
+                    }
+                }
+            }
+        });
+
+        frame.setLayout(new FlowLayout());
+        frame.add(mouseLabel);
+        frame.add(numericField);
+        frame.add(listButton);
+        frame.add(new JScrollPane(fileArea));
+        
+        frame.addMouseMotionListener(new MouseMotionAdapter() {
+            public void mouseMoved(MouseEvent e) {
+                mouseLabel.setText("Mouse: X=" + e.getX() + ", Y=" + e.getY());
+            }
+        });
+        
+        frame.setVisible(true);
+    }
+}
